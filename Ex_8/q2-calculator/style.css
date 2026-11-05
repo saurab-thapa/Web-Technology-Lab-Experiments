@@ -1,0 +1,15 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 28px 16px; font-family: Arial, sans-serif; color: #243047; background: linear-gradient(135deg, #e7f7f0, #eaf0ff); }
+.calculator { max-width: 470px; margin: auto; padding: 30px; border-radius: 22px; background: white; box-shadow: 0 18px 50px #24304718; }
+header { text-align: center; margin-bottom: 26px; }
+.tag { color: #168568; font-size: 12px; font-weight: bold; letter-spacing: 1.5px; }
+h1 { margin: 10px 0 6px; font-size: 32px; }
+header p { color: #788399; }
+header small { display: inline-block; padding: 8px 12px; margin-top: 8px; border-radius: 20px; color: #16745f; background: #eafaf4; }
+label { display: block; margin: 15px 0 7px; font-size: 14px; font-weight: bold; }
+input, select { width: 100%; padding: 13px; border: 1px solid #dce4e9; border-radius: 10px; background: white; font: inherit; }
+input:focus, select:focus { outline: 2px solid #9bdcc9; border-color: transparent; }
+.result { display: flex; flex-direction: column; gap: 8px; margin-top: 22px; padding: 20px; border-radius: 14px; background: #edf9f4; }
+.result span { color: #168568; font-size: 12px; font-weight: bold; letter-spacing: 1.5px; }
+.result strong { font-size: 32px; overflow-wrap: anywhere; }
+.clear { width: 100%; margin-top: 14px; padding: 12px; border: 0; border-radius: 10px; background: #edf0f7; color: #3c4960; font-weight: bold; cursor: pointer; }

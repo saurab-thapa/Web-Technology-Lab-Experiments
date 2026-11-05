@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>User Registration Form</h1>
+
+        <form action="/server" method="POST" id="registerForm">
+
+            <label>Name</label>
+            <input type="text" name="name" required pattern="[A-Za-z ]+">
+
+            <label>Password</label>
+            <input type="password" name="password" required minlength="8">
+
+            <label>Age</label>
+            <input type="number" name="age" required min="1" max="100">
+
+            <label>Mobile Number</label>
+            <input type="tel" name="mobile" required pattern="[0-9]{10}">
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Gender</label>
+            <div class="options">
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+
+            <label>State</label>
+            <select name="state" required>
+                <option value="">Select State</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Telangana">Telangana</option>
+            </select>
+
+            <label>Skills</label>
+            <div class="options">
+                <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                <label><input type="checkbox" name="skills" value="Python"> Python</label>
+                <label><input type="checkbox" name="skills" value="C++"> C++</label>
+                <label><input type="checkbox" name="skills" value="Java"> Java</label>
+            </div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 28px 16px; font-family: Arial,sans-serif; color: #202943; background: linear-gradient(135deg,#e8f1ff,#f7f2ff); }
+.workshop { max-width: 760px; margin: auto; padding: 28px; border-radius: 24px; background: white; box-shadow: 0 18px 55px #263d6818; }
+header { text-align: center; }
+.eyebrow { color: #6558d3; font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+h1 { margin: 10px 0; font-size: clamp(25px,5vw,36px); }
+header p { color: #78839a; }
+header small { display: inline-block; padding: 8px 12px; border-radius: 20px; color: #5145b5; background: #f0efff; }
+.garage { position: relative; height: 260px; margin: 25px 0; overflow: hidden; border-radius: 18px; background: linear-gradient(#dff3ff 0 68%,#d5e8d7 68%); }
+.sun { position: absolute; top: 25px; right: 35px; width: 48px; height: 48px; border-radius: 50%; background: #ffd166; }
+.car { position: absolute; width: 300px; height: 130px; left: 50%; bottom: 45px; transform: translateX(-50%); }
+.roof { position: absolute; left: 74px; top: 4px; width: 150px; height: 60px; background: #4f46e5; clip-path: polygon(22% 0,75% 0,100% 100%,0 100%); }
+.body { position: absolute; left: 18px; top: 52px; width: 265px; height: 57px; background: #4f46e5; border-radius: 25px 36px 15px 15px; }
+.window { position: absolute; z-index: 2; top: 14px; height: 42px; background: #a8e5f7; border: 3px solid #ffffff; }
+.front-window { left: 155px; width: 61px; clip-path: polygon(0 0,70% 0,100% 100%,0 100%); }
+.back-window { left: 92px; width: 59px; clip-path: polygon(25% 0,100% 0,100% 100%,0 100%); }
+.bumper { position: absolute; z-index: 3; left: 8px; top: 91px; width: 285px; height: 14px; border-radius: 8px; background: #303b57; }
+.wheel { position: absolute; z-index: 4; top: 91px; width: 54px; height: 54px; border: 7px solid #d7deea; border-radius: 50%; background: #202943; transition: width .2s,height .2s; }
+.wheel-left { left: 48px; } .wheel-right { right: 38px; }
+.light { position: absolute; z-index: 4; right: 5px; top: 67px; width: 15px; height: 18px; border-radius: 5px; background: #fff2a8; }
+.road { position: absolute; bottom: 24px; width: 100%; display: flex; justify-content: space-around; }
+.road span { width: 70px; height: 4px; border-radius: 5px; background: #ffffff; }
+.controls { max-width: 540px; margin: auto; }
+.controls h2 { text-align: center; }
+.control-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; }
+input[type=color] { width: 65px; height: 40px; padding: 3px; border: 1px solid #dce2ee; border-radius: 8px; background: white; cursor: pointer; }
+.buttons { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
+button { padding: 12px 10px; border: 0; border-radius: 10px; background: #5145b5; color: white; font-weight: bold; cursor: pointer; }
+button:hover { background: #39308e; }
+button.secondary { background: #edf0f7; color: #38445d; }
+#status { min-height: 20px; text-align: center; color: #6b7280; font-size: 14px; }
+@media(max-width: 480px) { .workshop { padding: 20px 14px; } .garage { height: 230px; } .car { transform: translateX(-50%) scale(.82); transform-origin: bottom center; } .buttons { grid-template-columns: 1fr; } }

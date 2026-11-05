@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png"),
+                    linear-gradient(to bottom, #d7f0ff, #ffffff);
+}
+
+/* Header */
+header {
+  padding: 40px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(90deg, #004d40, #26a69a);
+  box-shadow: 0 5px 15px gray;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  background: #333;
+}
+
+nav a {
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #ff9800;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 40px;
+}
+
+/* Fixed the hidden invisible spaces here */
+.hero img {
+  display: block;
+  width: 80%;
+  max-width: 900px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 25px;
+  box-shadow: 0 0 20px black;
+  object-fit: cover; /* Added to prevent image stretching */
+}
+
+/* Card */
+.card {
+  width: 85%;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 0 15px gray;
+}
+
+/* Places Grid */
+.places {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+.place {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border: 18px solid transparent;
+  border-image: url("https://www.w3schools.com/css/border.png") 30 round;
+  border-radius: 20px;
+  box-shadow: 0 0 15px gray;
+  transition: .5s;
+}
+
+#places {
+  padding: 30px 0;
+}
+
+#places h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  margin-bottom: 15px;
+}
+
+.hero p {
+  width: 80%;
+  margin: 20px auto;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.place:hover {
+  transform: scale(1.05);
+}
+
+.place img {
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Table */
+table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+
+th {
+  background: #00695c;
+  color: white;
+  padding: 15px;
+}
+
+td {
+  padding: 15px;
+  border: 1px solid gray;
+}
+
+tr:nth-child(odd) {
+  background: #e8f5e9;
+}
+
+tr:nth-child(even) {
+  background: #fffde7;
+}
+
+tr:hover {
+  background: #ffe082;
+}
+
+/* Form */
+.form-box {
+  width: 450px;
+  margin: 40px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 0 15px gray;
+}
+
+/* Added base border so things don't jump on focus */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px; /* Looks cleaner */
+}
+
+/* Changed to outline to prevent layout shift */
+input:focus, textarea:focus {
+  outline: 3px solid red;
+  border-color: red;
+  background: #e3f2fd;
+}
+
+input:required {
+  border: 2px solid blue;
+}
+
+input[type=email]:valid {
+  color: green;
+}
+
+input[type=email]:invalid {
+  color: red;
+}
+
+input[type=submit] {
+  background: #00695c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* slightly larger text */
+}
+
+input[type=submit]:hover {
+  background: #ff9800;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 25px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(to right, #263238, #455a64);
+}

@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 48px 20px;
+    background: linear-gradient(135deg, #eaf2ff, #f7f9fc 55%, #e8f7f4);
+    color: #243247;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 auto 28px;
+    color: #173b70;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #52647b;
+    font-weight: bold;
+}
+
+select,
+button {
+    padding: 11px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+select {
+    min-width: min(100%, 290px);
+    background-color: #fff;
+    color: #243247;
+}
+
+button {
+    margin: 8px 5px;
+    border-color: #1f5fae;
+    background-color: #1f5fae;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    background-color: #174b8c;
+}
+
+button:focus-visible,
+select:focus-visible {
+    outline: 3px solid #83b8f5;
+    outline-offset: 2px;
+}
+
+#app {
+    width: min(100%, 760px);
+    min-height: 190px;
+    margin: 30px auto 0;
+    padding: clamp(22px, 5vw, 38px);
+    border: 1px solid rgba(203, 213, 225, 0.8);
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 14px 35px rgba(39, 63, 94, 0.1);
+}
+
+#app h2 {
+    margin: 0 0 18px;
+    color: #234b7d;
+}
+
+#app p {
+    color: #52647b;
+    line-height: 1.6;
+}
+
+#time {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background-color: #e9f6ef;
+    color: #16804a;
+    font-size: clamp(2rem, 8vw, 3rem);
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+}
+
+#para1 {
+    display: inline-block;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #f0f5fb;
+    cursor: pointer;
+    transition: font-size 180ms ease, color 180ms ease;
+}
+
+#track {
+    position: relative;
+    height: 105px;
+    margin: 28px 0 18px;
+    overflow: hidden;
+    border: 2px solid #d5e0ec;
+    border-bottom: 5px solid #53657b;
+    border-radius: 12px;
+    background: repeating-linear-gradient(
+        90deg,
+        #f4f8fc 0,
+        #f4f8fc 44px,
+        #edf3f9 44px,
+        #edf3f9 88px
+    );
+    text-align: left;
+}
+
+#car {
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+    width: 60px;
+    font-size: 50px;
+    line-height: 1;
+    transform: scaleX(-1);
+    transform-origin: center;
+}
+
+.student {
+    max-width: 450px;
+    margin: 12px auto;
+    padding: 16px;
+    border: 1px solid #e1e8f0;
+    border-left: 4px solid #4385c5;
+    border-radius: 8px;
+    background-color: #f8fbff;
+    line-height: 1.6;
+    text-align: left;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 32px 16px;
+    }
+
+    #app {
+        margin-top: 22px;
+    }
+}

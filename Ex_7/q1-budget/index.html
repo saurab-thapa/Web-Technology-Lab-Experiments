@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Calculator | Experiment 7</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <header>
+      <span class="eyebrow">EXPERIMENT 07 · JQUERY</span>
+      <h1>My Budget Planner</h1>
+      <p>Give every rupee a purpose.</p>
+      <small>Register No: <strong>URK24CS9026</strong></small>
+    </header>
+    <label for="amount">Monthly amount (₹)</label>
+    <input id="amount" type="number" min="0" value="20000">
+    <p class="hint">Enter the percentage for each category. The total must equal 100%.</p>
+    <div class="fields">
+      <label>Room rent (%) <input class="percent" id="rent" type="number" min="0" max="100" value="30"></label>
+      <label>Accessories (%) <input class="percent" id="accessories" type="number" min="0" max="100" value="20"></label>
+      <label>Emergency (%) <input class="percent" id="emergency" type="number" min="0" max="100" value="10"></label>
+      <label>Savings (%) <input class="percent" id="savings" type="number" min="0" max="100" value="40"></label>
+    </div>
+    <button id="evaluate">Evaluate My Money</button>
+    <p id="message" role="status"></p>
+    <section class="results">
+      <h2>Your breakdown</h2>
+      <div class="result-row"><span>Room rent</span><strong id="rentResult">₹0</strong></div>
+      <div class="result-row"><span>Accessories</span><strong id="accessoriesResult">₹0</strong></div>
+      <div class="result-row"><span>Emergency</span><strong id="emergencyResult">₹0</strong></div>
+      <div class="result-row"><span>Savings</span><strong id="savingsResult">₹0</strong></div>
+    </section>
+  </main>
+</body>
+</html>

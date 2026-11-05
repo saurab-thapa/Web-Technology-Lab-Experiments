@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML5 Showcase Page</title>
+    <style>
+        body{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFyi7GERKGjTMDzhlRno6dZB-SL10ki3FNQkNG2yeX5g&s=10")}
+    </style>
+</head>
+<body >
+    <center>
+    <!-- Header Section -->
+    <h1>My HTML5 Showcase Page</h1>
+    
+    <p>
+        Welcome to my HTML5 Showcase Page! The purpose of this website is to demonstrate a wide variety of standard HTML5 elements functioning together in a single, well-structured document. By exploring the different sections below, you can see exactly how tables, forms, media, and embedded content render in a modern web browser. This serves as a helpful, practical reference for anyone learning basic web development.
+    </p>
+
+    <!-- Image Section -->
+    <h2>1. Placeholder Image</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZgDCbwoZhbe6gJuteLWkR7Ro9jsOONdsLN1J4loPnYLzH_B05lNCvlj4&s=10" alt="A simple placeholder image showing dimensions 300x150">
+
+    <!-- External Link Section -->
+    <h2>2. Website Link</h2>
+    <p>Visit <a href="https://www.w3schools.com/" target="_blank">W3Schools</a> to learn more about HTML.</p>
+
+    <!-- Table Section -->
+    <h2>3. HTML Elements Table</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Element Name</th>
+                <th>Category</th>
+                <th>Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;a&gt;</td>
+                <td>Inline Element</td>
+                <td>Creates a hyperlink to other web pages or files.</td>
+            </tr>
+            <tr>
+                <td>&lt;table&gt;</td>
+                <td>Block Element</td>
+                <td>Used to organize and display tabular data in rows and columns.</td>
+            </tr>
+            <tr>
+                <td>&lt;audio&gt;</td>
+                <td>Media Element</td>
+                <td>Embeds sound content directly into a web document.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Form Section -->
+    <h2>4. User Information Form</h2>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Personal Details</legend>
+            
+            <!-- Input 1: Text -->
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            <br><br>
+
+            <!-- Input 2: Email -->
+            <label for="emailAddress">Email Address:</label>
+            <input type="email" id="emailAddress" name="emailAddress" required>
+            <br><br>
+
+            <!-- Input 3: Date -->
+            <label for="birthday">Date of Birth:</label>
+            <input type="date" id="birthday" name="birthday">
+            <br><br>
+
+            <!-- Select Dropdown -->
+            <label for="continent">Continent of Residence:</label>
+            <select id="continent" name="continent">
+                <option value="na">North America</option>
+                <option value="eu">Europe</option>
+                <option value="as">Asia</option>
+                <option value="other">Other</option>
+            </select>
+            <br><br>
+
+            <!-- Input 4: Radio Buttons -->
+            <p>Preferred Contact Method:</p>
+            <input type="radio" id="contactEmail" name="contactMethod" value="email">
+            <label for="contactEmail">Email</label>
+            
+            <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+            <label for="contactPhone">Phone</label>
+            <br><br>
+
+            <!-- Input 5: Checkbox -->
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+            <label for="newsletter">Subscribe to weekly newsletter</label>
+            <br><br>
+
+            <!-- Progress Bar -->
+            <label for="profileCompletion">Profile Completion:</label>
+            <progress id="profileCompletion" value="70" max="100">70%</progress>
+            <br><br>
+
+            <!-- Form Buttons -->
+            <button type="submit">Submit Details</button>
+            <button type="reset">Clear Form</button>
+        </fieldset>
+    </form>
+
+    <!-- Audio Section -->
+    <h2>5. Playable Audio</h2>
+    <p>Listen to this sample audio file:</p>
+    <audio controls>
+        <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/music/menu.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Video Section -->
+    <h2>6. Playable Video</h2>
+    <p>Watch this sample video clip:</p>
+    <video width="600" height="400" controls>
+        <source src="https://static.videezy.com/system/resources/previews/000/003/805/original/MVI_2350.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Media Link Section -->
+    <h2>7. Link to a Media File</h2>
+    <p>Click here to view a <a href="https://www.w3schools.com/html/img_girl.jpg" target="_blank">high-resolution media image</a> directly.</p>
+
+    <!-- Iframe Section -->
+    <h2>8. Embedded Webpage</h2>
+    <p>Below is an embedded view of a sample webpage:</p>
+    <iframe src="https://www.wikipedia.org/" width="900" height="600" title="Example Website">
+        Your browser does not support iframes.
+    </iframe>
+    </center>
+
+</body>
+</html>

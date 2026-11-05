@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="registrationApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration | Experiment 9</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body ng-controller="RegistrationController">
+  <main class="card">
+    <header>
+      <span class="tag">EXPERIMENT 09 · ANGULARJS</span>
+      <h1>User Registration</h1>
+      <p>Fill in all details to create your profile.</p>
+      <small>Register No: <strong>URK24CS9026</strong></small>
+    </header>
+
+    <form name="regForm" ng-submit="submitForm()" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" ng-model="user.name" ng-pattern="/^[A-Za-z ]+$/" required placeholder="Your full name">
+        <small class="error" ng-show="regForm.name.$touched && regForm.name.$error.required">Name is required.</small>
+        <small class="error" ng-show="regForm.name.$touched && regForm.name.$error.pattern">Name must contain letters only.</small>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" ng-model="user.password" ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/" required placeholder="At least 8 characters">
+        <small class="error" ng-show="regForm.password.$touched && regForm.password.$error.required">Password is required.</small>
+        <small class="error" ng-show="regForm.password.$touched && regForm.password.$error.pattern">Use 8+ characters with uppercase, lowercase and a number.</small>
+      </div>
+
+      <div class="field">
+        <label for="age">Age</label>
+        <input id="age" name="age" type="number" ng-model="user.age" min="18" max="30" required placeholder="18–30">
+        <small class="error" ng-show="regForm.age.$touched && (regForm.age.$error.required || regForm.age.$error.min || regForm.age.$error.max)">Age must be between 18 and 30.</small>
+      </div>
+
+      <div class="field">
+        <label for="mobile">Mobile number</label>
+        <input id="mobile" name="mobile" type="text" ng-model="user.mobile" ng-pattern="/^[0-9]{10}$/" maxlength="10" required placeholder="10-digit mobile number">
+        <small class="error" ng-show="regForm.mobile.$touched && (regForm.mobile.$error.required || regForm.mobile.$error.pattern)">Enter a valid 10-digit mobile number.</small>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" ng-model="user.email" required placeholder="you@example.com">
+        <small class="error" ng-show="regForm.email.$touched && (regForm.email.$error.required || regForm.email.$error.email)">Enter a valid email address.</small>
+      </div>
+
+      <fieldset class="field gender">
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" ng-model="user.gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" ng-model="user.gender" value="Female" required> Female</label>
+        <small class="error" ng-show="regForm.gender.$touched && regForm.gender.$error.required">Please select a gender.</small>
+      </fieldset>
+
+      <div class="field">
+        <label for="state">State</label>
+        <select id="state" name="state" ng-model="user.state" required>
+          <option value="">Select your state</option>
+          <option>Tamil Nadu</option>
+          <option>Kerala</option>
+          <option>Karnataka</option>
+          <option>Andhra Pradesh</option>
+          <option>Telangana</option>
+          <option>Maharashtra</option>
+          <option>Other</option>
+        </select>
+        <small class="error" ng-show="regForm.state.$touched && regForm.state.$error.required">Please select a state.</small>
+      </div>
+
+      <button type="submit" ng-disabled="regForm.$invalid">Submit Registration</button>
+      <p class="success" ng-if="submitted">Registration form submitted successfully!</p>
+    </form>
+  </main>
+</body>
+</html>

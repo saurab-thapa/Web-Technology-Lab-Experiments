@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List | Experiment 8</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body ng-controller="TodoController">
+  <main class="todo">
+    <header>
+      <span class="tag">EXPERIMENT 08 · ANGULARJS</span>
+      <h1>My To-Do List</h1>
+      <p>Small steps make a productive day.</p>
+      <small>Register No: <strong>URK24CS9026</strong></small>
+    </header>
+    <form ng-submit="addTask()">
+      <input type="text" ng-model="title" placeholder="Add a new task..." aria-label="New task" required>
+      <button type="submit">Add task</button>
+    </form>
+    <div class="summary">
+      <span>Your tasks</span>
+      <strong>{{ tasks.length }}</strong>
+    </div>
+    <p class="empty" ng-if="tasks.length === 0">You're all caught up. Add a task to get started!</p>
+    <ul>
+      <li ng-repeat="task in tasks track by $index">
+        <span>{{ task }}</span>
+        <button type="button" ng-click="removeTask($index)" aria-label="Delete task">×</button>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>

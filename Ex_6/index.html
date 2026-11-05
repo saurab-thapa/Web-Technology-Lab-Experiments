@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT – TIMER FUNCTIONS AND ARRAYS</title>
+    <link rel="stylesheet" href="ex6.css">
+</head>
+<body>
+
+    <h1>JavaScript - Timer Functions and Arrays</h1>
+
+    <label for="question">Select Question:</label>
+    <select id="question" onchange="loadQuestion(this.value)">
+        <option value="1">Question 1 - Digital Clock</option>
+        <option value="2">Question 2 - Dynamic Background</option>
+        <option value="3">Question 3 - Font Size</option>
+        <option value="4">Question 4 - Move Car</option>
+        <option value="5">Question 5 - Student Array</option>
+    </select>
+
+    <div id="app"></div>
+
+    <script>
+        function loadQuestion(q) {
+            window.location.href = "ex6.html?q=" + q;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const q = params.get("q") || "1";
+
+        document.getElementById("question").value = q;
+
+        const script = document.createElement("script");
+        script.src = "q" + q + ".js";
+        document.body.appendChild(script);
+    </script>
+
+</body>
+</html>

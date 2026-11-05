@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="campusApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Hub | Experiment 9</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="site" ng-controller="SiteController">
+    <header class="hero">
+      <span class="tag">EXPERIMENT 09 · ANGULARJS ROUTING</span>
+      <h1>Campus Hub</h1>
+      <p>Your little guide to campus life.</p>
+      <small>Register No: <strong>URK24CS9026</strong></small>
+    </header>
+    <nav>
+      <a href="#!/home">Home</a>
+      <a href="#!/courses">Courses</a>
+      <a href="#!/events">Events</a>
+      <a href="#!/contact">Contact</a>
+    </nav>
+    <main class="content" ng-view></main>
+    <footer>Campus Hub · Built with AngularJS</footer>
+  </div>
+</body>
+</html>

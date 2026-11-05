@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Workshop | Experiment 7</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="workshop">
+    <header>
+      <span class="eyebrow">EXPERIMENT 07 · JQUERY</span>
+      <h1>Car Customization Studio</h1>
+      <p>Give your ride its own style.</p>
+      <small>Register No: <strong>URK24CS9026</strong></small>
+    </header>
+    <section class="garage">
+      <div class="sun"></div>
+      <div id="car" class="car">
+        <div class="roof"></div>
+        <div class="window front-window"></div>
+        <div class="window back-window"></div>
+        <div class="body"></div>
+        <div class="bumper"></div>
+        <div class="wheel wheel-left"></div>
+        <div class="wheel wheel-right"></div>
+        <div class="light"></div>
+      </div>
+      <div class="road"><span></span><span></span><span></span></div>
+    </section>
+    <section class="controls">
+      <h2>Workshop controls</h2>
+      <div class="control-row">
+        <label for="carColor">Car body color</label>
+        <input type="color" id="carColor" value="#4f46e5">
+      </div>
+      <div class="buttons">
+        <button id="tint">Change Glass Tint</button>
+        <button id="bigger">Tyre Size Up</button>
+        <button id="smaller">Tyre Size Down</button>
+        <button id="reset" class="secondary">Reset</button>
+      </div>
+      <p id="status" role="status">Choose a color or try a workshop control.</p>
+    </section>
+  </main>
+</body>
+</html>

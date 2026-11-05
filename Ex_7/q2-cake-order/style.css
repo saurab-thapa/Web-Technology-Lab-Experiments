@@ -1,0 +1,24 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 25px 14px; font-family: Arial,sans-serif; background: #fff7f4; color: #352b35; }
+.shop { max-width: 760px; margin: auto; background: white; border-radius: 22px; overflow: hidden; box-shadow: 0 16px 45px #5a252012; }
+.top { text-align: center; padding: 25px 16px; background: #a92f46; color: white; }
+.top span { font-size: 11px; letter-spacing: 4px; }
+.top h1 { margin: 6px 0; letter-spacing: 2px; }
+.top p { margin: 6px 0 12px; color: #ffe4e8; }
+.top small { display: inline-block; padding: 7px 12px; border: 1px solid #ffffff75; border-radius: 20px; }
+.cakes { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; padding: 22px; }
+.cake { text-align: center; padding: 12px 6px; border: 1px solid #f2e2e4; border-radius: 14px; }
+.cake-art { display: grid; place-items: center; height: 80px; border-radius: 12px; font-size: 40px; }
+.rainbow { background: #fff0c9; } .chocolate { background: #f5e3d6; } .vanilla { background: #f8eefc; } .berry { background: #ffe4eb; }
+.cake h3 { font-size: 14px; margin: 12px 0 5px; }
+.cake p { margin: 0; color: #a92f46; font-size: 13px; font-weight: bold; }
+.order { max-width: 500px; margin: 0 auto; padding: 8px 24px 28px; }
+.order h2 { text-align: center; color: #a92f46; }
+.order label { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 12px 0; font-size: 14px; }
+input { width: 90px; padding: 10px; border: 1px solid #e5cdd2; border-radius: 8px; font-size: 15px; }
+button { width: 100%; padding: 13px; margin-top: 8px; border: 0; border-radius: 10px; background: #a92f46; color: white; font-size: 16px; font-weight: bold; cursor: pointer; }
+button:hover { background: #862238; }
+.total { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; padding: 15px; border-radius: 12px; background: #e8f5e9; color: #216b3a; font-weight: bold; }
+.total strong { font-size: 23px; }
+#message { text-align: center; color: #a92f46; }
+@media(max-width: 560px) { .cakes { grid-template-columns: repeat(2,1fr); padding: 14px; } .order { padding: 8px 18px 24px; } .order label { align-items: flex-start; } }
